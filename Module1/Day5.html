@@ -55,6 +55,21 @@ Note: the form should just be implemented in HTML + CSS, no extra code needed.
             The field must accept ONLY valid emails (empty email is not a valid email).
             [OPTIONAL] On submit click, console log the value of the email
         -->
+        <div>
+            <p>Leave your email below</p>
+            <input id="email" type="email"/>
+            <input id="submitButton" type="button" value="Submit" onclick="getEmail()"/>
+        </div>
+        <script>
+            function getEmail(){
+                let email = document.querySelector("#email").value
+                console.log("My email is", email)
+                document.querySelector("#email").value = ""
+                let userEmail = document.createElement(div)
+                
+            }
+        </script>
+        
         
                
     <!-- EXERCISE 7: 
