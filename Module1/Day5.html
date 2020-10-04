@@ -60,19 +60,7 @@ Note: the form should just be implemented in HTML + CSS, no extra code needed.
             <input id="email" type="email"/>
             <input id="submitButton" type="button" value="Submit" onclick="getEmail()"/>
         </div>
-        <script>
-            function getEmail(){
-                let email = document.querySelector("#email").value
-                console.log("My email is", email)
-                document.querySelector("#email").value = ""
-                let userEmail = document.createElement(div)
-                
-            }
-        </script>
-        
-        
-               
-    <!-- EXERCISE 7: 
+        <!-- EXERCISE 7: 
             Create an "book haircut" form.
             The form must have:
             - phone number
@@ -83,6 +71,45 @@ Note: the form should just be implemented in HTML + CSS, no extra code needed.
             Style it as you like it.
             [OPTIONAL] On submit click, console log an object containing Phone Number, Date and Name.
         -->
+        <div> 
+            <p>Book your haircut</p>
+            <input id="phoneNumber" type="number" required /> <br>
+            <br>
+            <input id="date" type="date" required /> <br> <br>
+            <input id="name" type="text" /> <br> <br>
+            <input id="submitButton" type="button" value="Submit" onclick="getUserData()"/>
+        </div>
+
+        <script>
+            function getEmail(){
+                let email = document.querySelector("#email").value
+                console.log("My email is", email)
+                let userEmail = document.createElement("div")
+                userEmail.innerText = email
+                document.querySelector("body").appendChild(userEmail)
+                document.querySelector("#email").value = ""
+                
+            }
+            function getUserData(){
+                let phoneNumber = document.querySelector("#phoneNumber").value
+                let date = document.querySelector("#date").value
+                let name = document.querySelector("#name").value
+                console.log("My phone number is ", phoneNumber)
+                console.log("My appointment is on the ", date)
+                console.log("My name is", name)
+                let userData = document.createElement("div")
+                userData.innerText = "My booking details are as follows: " + " " + phoneNumber + " "
+                 + date  + " " + name
+                document.querySelector("body").appendChild(userData)
+                document.querySelector("#phoneNumber").value = ""
+                document.querySelector("#date").value = ""
+                document.querySelector("#name").value = ""
+            }
+        </script>
+        
+        
+               
+    
         
 
 
